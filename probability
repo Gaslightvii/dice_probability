@@ -1,0 +1,20 @@
+import random
+
+# Gets the total number of sides of the dice
+total = int(input("Total: "))
+
+# The program generates a random number for their roll
+p1 = random.randrange(1, total +1)
+print("Player 1 rolls:", p1)
+
+# Shows the percentage probability of player 2 rolling the same
+p2_same = (1 / total) * 100
+print("Draw:", p2_same, "%")
+
+# Shows the percentage probability of player 2 rolling a higher number
+p2_win = (total - p1) * p2_same
+print("Win:", p2_win, "%")
+
+# Shows the percentage probability of player 2 rolling a lower number
+p2_lose = (p1 - 1) * p2_same
+print("Lose:", p2_lose, "%")
